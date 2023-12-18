@@ -1,5 +1,3 @@
-Certainly! Here's a simple README template for your GitHub repository:
-
 ```markdown
 # Folder Synchronization Script
 
@@ -10,30 +8,22 @@ This Python script performs one-way synchronization of files from a source folde
 ### Prerequisites
 
 - Python installed on your machine
-- (Optional) Virtual environment for dependencies
 
 ### Installation
 
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your-username/folder-synchronization.git
+    git clone https://github.com/miguelsoliveira005/Sync-folders.git
     ```
 
 2. Navigate to the project directory:
 
     ```bash
-    cd folder-synchronization
+    cd Sync-folders
     ```
 
-3. (Optional) Create and activate a virtual environment:
-
-    ```bash
-    python -m venv venv
-    source venv/bin/activate
-    ```
-
-4. Install dependencies:
+3. Install dependencies:
 
     ```bash
     pip install -r requirements.txt
@@ -44,10 +34,10 @@ This Python script performs one-way synchronization of files from a source folde
 Execute the script with the following command:
 
 ```bash
-python sync_script.py /path/to/source_folder /path/to/replica_folder /path/to/sync_log.txt
+python Sync.py /path-to-source /path-to-replica /path-to-LogFile.txt
 ```
 
-Replace `/path/to/source_folder`, `/path/to/replica_folder`, and `/path/to/sync_log.txt` with the actual paths.
+Replace `/path-to-source`, `/path-to-replica`, and `/path-to-LogFile.txt` with the actual paths.
 
 ### Schedule Periodic Execution
 
@@ -56,16 +46,12 @@ To schedule the script to run periodically, you can use cron jobs on Linux/Mac o
 #### Linux/Mac
 
 ```bash
-* * * * * /path/to/python /path/to/your/sync_script.py /path/to/source_folder /path/to/replica_folder /path/to/sync_log.txt
+* * * * * /path-to-python /path-to-your-Sync.py /path-to-source /path-to-replica /path-to-LogFile.txt
 ```
 
 #### Windows
 
 Use Task Scheduler to create a new task and set the trigger to run the script at your preferred interval.
 
-## License
 
-This project is licensed under the [MIT License](LICENSE).
-```
-
-Make sure to replace placeholders like `/path/to/source_folder` with the actual paths. Adjust the content as needed for your specific project details.
+Make sure to replace placeholders like `/path-to-source` with the actual paths. Adjust the content as needed for your specific project details.
