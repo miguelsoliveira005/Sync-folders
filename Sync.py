@@ -3,6 +3,7 @@ import shutil
 import datetime
 import argparse
 
+#Replace placeholders like LogFile with the actual paths.
 LOG_FILE = "/home/moliveira/Desktop/LogFile.txt"
 
 def sync_folders(source_folder, replica_folder):
@@ -20,12 +21,12 @@ def sync_folders(source_folder, replica_folder):
         source_path = os.path.join(source_folder, file_name)
         replica_path = os.path.join(replica_folder, file_name)
 
-        # If the file exists in the replica folder and is different, update it
+        # If the file exists in the replica and is different, update it
         if file_name in replica_files and os.path.getmtime(source_path) != os.path.getmtime(replica_path):
             shutil.copy2(source_path, replica_path)
             log_message(f"Updated: {file_name}")
 
-        # If the file doesn't exist in the replica folder, copy it
+        # If the file doesn't exist in the replica, copy it
         elif file_name not in replica_files:
             shutil.copy2(source_path, replica_path)
             log_message(f"Copied: {file_name}")
@@ -43,6 +44,7 @@ def log_message(message):
     log_entry = f"{timestamp} - {message}\n"
     with open(LOG_FILE, 'a') as log:
         log.write(log_entry)
+        #print in console
         print(log_entry)
 
 
@@ -54,6 +56,7 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
+#Replace placeholders like source_folder with the actual paths.
 source_folder = "/home/moliveira/Desktop/Source"
 replica_folder = "/home/moliveira/Desktop/Replica"
 
