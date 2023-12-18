@@ -6,7 +6,7 @@ import argparse
 LOG_FILE = "/home/moliveira/Desktop/LogFile.txt"
 
 def sync_folders(source_folder, replica_folder):
-    # Make sure the source folder exists.
+    # Make sure the source folder exists
     if not os.path.exists(source_folder):
         log_message("Source folder does not exist.")
         return
